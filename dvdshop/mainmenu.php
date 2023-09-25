@@ -15,11 +15,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Member Bio</title>
+    <style>
+			nav {
+				display: flex;
+			}
+
+			.nav-btn {
+				width: 120px;
+				height: 32px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: 0.3s;
+				z-index: 1;
+
+				position: relative;
+			}
+
+			.nav-btn::after {
+				content: '';
+				width: 0%;
+				height: 0%;
+				position: absolute;
+				z-index: -1;
+				background-color: rgb(255, 113, 62);
+				transition: 0.3s;
+			}
+
+			.nav-btn:hover::after {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
 </head>
 
 <body>
+    <h2>Preview :</h2>
+		<nav>
+			<div class="nav-btn">Home</div>
+			<div class="nav-btn">About</div>
+			<div class="nav-btn">Contact</div>
+		</nav>
     <div class="container">
-        <h1>Student Bio</h1><br>
+        <h1>Student </h1><br>
         <table class="table">
             <thead>
                 <tr>
