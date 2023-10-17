@@ -1,6 +1,6 @@
 <?php
 require 'conn.php';
-$sql_update="UPDATE studentbio SET sname='$_POST[sname]',slastname='$_POST[slastname]' ,address='$_POST[address]' ,telephone='$_POST[telephone]' WHERE sid='$_POST[sid]' ";
+$sql_update="UPDATE member SET id='$_POST[id]',name='$_POST[name]' ,lastname='$_POST[lastname]' ,address='$_POST[address]' ,telephone='$_POST[telephone]' WHERE id='$_POST[id]' ";
 
 $result= $conn->query($sql_update);
 
@@ -9,7 +9,7 @@ if(!$result) {
 } else {
 
 echo "Edit Success <br>";
-header("refresh: 1; url=http://localhost/student/mainmenu.php");
+header("refresh: 1; url=http://localhost/dvdshop/mainmenu.php");
 }
 
 ?>

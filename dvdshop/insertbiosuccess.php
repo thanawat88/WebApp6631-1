@@ -1,6 +1,6 @@
 <?php
 require 'conn.php';
-$sql_update="INSERT INTO studentbio(sname,slastname,address,telephone) VALUES ('$_POST[sname]','$_POST[slastname]' ,'$_POST[address]' ,'$_POST[telephone]')";
+$sql_update="INSERT INTO member(id,name,lastname,address,telephone) VALUES ('$_POST[id]','$_POST[name]' ,'$_POST[lastname]' ,'$_POST[address]','$_POST[telephone]')";
 
 $result= $conn->query($sql_update);
 
@@ -9,7 +9,7 @@ if(!$result) {
 } else {
 
 echo "Insert Success <br>";
-header("refresh: 1; url=http://localhost/student/mainmenu.php");
+header("refresh: 1; url=http://localhost/dvdshop/mainmenu.php");
 }
 
 ?>

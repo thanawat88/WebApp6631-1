@@ -1,9 +1,9 @@
 <?php
-if(!isset($_GET['sid'])){
+if(!isset($_GET['id'])){
     header("refresh: 0; url=http://localhost/dvdshop/mainmenu.php");
 }
 require 'conn.php';
-$sql = "SELECT * FROM studentbio WHERE sid='$_GET[sid]'";
+$sql = "SELECT * FROM member WHERE id='$_GET[id]'";
 $result = $conn->query($sql);
 $row = mysqli_fetch_array($result);
 ?>
@@ -19,21 +19,29 @@ $row = mysqli_fetch_array($result);
     <title>Edit</title>
 </head>
 
-<body class="container">
+<body class="container"><br>
+    <h1>Edit Member</h1><br>
     <form id="form1" name="form1" method="post" action="editsuccess.php">
         <p>
 
-            <label for="sname">ชื่อ</label>
-            <input type="text" name="sid" id="sid" value="<?=$row['sid'];?>" hidden>
-            <input type="text" name="sname" id="sname" value="<?=$row['sname'];?>" />
+            <label for="id">ID :</label>
+            <input type="text" name="id" id="id" value="<?=$row['id'];?>" />
 
         </p>
 
         <p>
 
-            <label for="slastname">นามสกุล</label>
+            <label for="name">ชื่อ</label>
 
-            <input type="text" name="slastname" id="slastname" value="<?=$row['slastname'];?>" />
+            <input type="text" name="name" id="name" value="<?=$row['name'];?>" />
+
+        </p>
+
+        <p>
+
+            <label for="lastname">นามสกุล</label>
+
+            <input type="text" name="lastname" id="lastname" value="<?=$row['lastname'];?>" />
 
         </p>
 
@@ -47,13 +55,13 @@ $row = mysqli_fetch_array($result);
 
         <p>
 
-            <label for="telephone">เบอร์โทร</label>
+            <label for="telephone">เบอร์โทรศัพท์</label>
 
             <input type="text" name="telephone" id="telephone" value="<?=$row['telephone'];?>" />
 
         </p>
         <input type="submit" class="btn btn-success" value="บันทึก">
-        <a class="btn btn-success" href='mainmenu.php'>Home</a>
+        <a class="btn btn-success" href='mainmenu.php'>ย้อนกลับ</a>
     </form>
 </body>
 

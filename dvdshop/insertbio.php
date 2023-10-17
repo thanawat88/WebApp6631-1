@@ -9,20 +9,29 @@
     <title>Edit</title>
 </head>
 
-<body class="container">
+<body class="container"><br>
+    <h1>Insert Member</h1><br>
     <form id="form1" name="form1" method="post" action="insertbiosuccess.php">
         <p>
 
-            <label for="sname">ชื่อ</label>
-            <input type="text" name="sname" id="sname">
+            <label for="id">ID :</label>
+            <input type="text" name="id" id="id">
 
         </p>
 
         <p>
 
-            <label for="slastname">นามสกุล</label>
+            <label for="name">ชื่อ</label>
 
-            <input type="text" name="slastname" id="slastname">
+            <input type="text" name="name" id="name">
+
+        </p>
+
+        <p>
+
+            <label for="lastname">นามสกุล</label>
+
+            <input type="text" name="lastname" id="lastname">
 
         </p>
 
@@ -33,16 +42,15 @@
             <input type="text" name="address" id="address">
 
         </p>
-
         <p>
 
-            <label for="telephone">เบอร์โทร</label>
+            <label for="telephone">เบอร์โทรศัพท์</label>
 
             <input type="text" name="telephone" id="telephone">
 
         </p>
         <input type="submit" class="btn btn-success" value="บันทึก">
-        <a class="btn btn-success" href='mainmenu.php'>Home</a>
+        <a class="btn btn-success" href='mainmenu.php'>ย้อนกลับ</a>
     </form>
 </body>
 
